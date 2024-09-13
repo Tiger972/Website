@@ -8,7 +8,7 @@ body {
     padding-top: 60px;
 
 }
-/* Style pour le header */
+
 header {
     position: fixed;
     top: 0;
@@ -21,8 +21,8 @@ header {
 
 nav {
     display: flex;
-    align-items: center; /* Aligne le logo et les éléments de la liste verticalement */
-    justify-content: space-between; /* Espace le logo des éléments de la liste */
+    align-items: center;
+    justify-content: space-between;
     background: linear-gradient(to right, blue, white);
     padding: 2px 200px;
     height: 60px;
@@ -35,7 +35,7 @@ nav img {
     margin-right: 10px;
 }
 
-/* Style pour la navigation */
+
 nav ul {
 
     list-style-type: none;
@@ -63,7 +63,7 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
-/* Section Hero */
+
 .hero {
     position: relative;
     width: 100%;
