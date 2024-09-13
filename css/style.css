@@ -31,7 +31,7 @@ nav {
 }
 
 nav img {
-    height: 40px; /* Ajuste la taille de l'image selon tes besoins */
+    height: 40px;
     margin-right: 10px;
 }
 
@@ -67,14 +67,14 @@ nav ul li a:hover {
 .hero {
     position: relative;
     width: 100%;
-    height: 400px; /* Ajuster la hauteur selon vos besoins */
+    height: 400px;
     background-image: url("../img/uefa.webp");
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-     /* S'assure que la section soit bien sous la nav */
+
 }
 .hero p{
     text-align: center;
@@ -86,13 +86,13 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Crée un effet d'opacité avec le noir */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Place le contenu au-dessus de l'image opaque */
+    z-index: 2;
     text-align: center;
     color: white;
 }
@@ -159,7 +159,7 @@ p {
 }
 
 .flex-container img {
-    width: 150px; /* Ajuste la taille de l'image si nécessaire */
+    width: 150px;
     height: auto;
     border-radius: 10px ;
 }
