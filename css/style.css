@@ -63,6 +63,63 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
+/* Section Hero */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Ajuster la hauteur selon vos besoins */
+    background-image: url("../img/uefa.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* S'assure que la section soit bien sous la nav */
+}
+.hero p{
+    text-align: center;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Crée un effet d'opacité avec le noir */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Place le contenu au-dessus de l'image opaque */
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.hero-content .btn:hover {
+    background-color: #ff4500;
+    transition: 0.3s;
+}
 .container {
     width: 60%;
     margin-bottom: 40px;
@@ -84,7 +141,7 @@ h2 {
 
 p {
     text-align: left;
-    margin-left: 40px;
+
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -104,6 +161,7 @@ p {
 .flex-container img {
     width: 150px; /* Ajuste la taille de l'image si nécessaire */
     height: auto;
+    border-radius: 10px ;
 }
 
 ul {
@@ -114,3 +172,288 @@ ul {
 li {
     margin: 10px 0;
 }
+
+.wrapper {
+    width:40%;
+    margin-top:40px;
+    padding:5px 10px;
+    background-color:#17191F;
+    border-radius:5px;
+}
+
+.campo {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 0;
+    margin: 10px auto;
+    padding: 0 0 60% 0;
+    /*background: green;*/
+    /*background-color: rgb(27,31,38);*/
+    background-color: #17191F;
+}
+
+.interior, .divisoria,
+.semi1, .semi2,
+.corner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 1px solid #323642;
+}
+
+.divisoria:after, .divisoria:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 100%;
+    margin-left: .5px;
+    border: 0.5px solid #323642;
+}
+.divisoria:before {
+    top: 50%;
+    width: 17%;
+    height: 0;
+    margin: -8% 0 0 -8%;
+    margin-top: calc(-8% - 4px);
+    margin-left: calc(-8% - .5px);
+    padding-bottom: 17%;
+    border-radius: 50%;
+    border: 1px solid #323642;
+}
+
+.campo:before, .campo:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 1px;
+    margin: -8% 0 0 -1px;
+    display: block;
+    width: 8%;
+    height: 30%;
+    border: 1px solid #323642;
+    z-index: 2;
+}
+
+.campo:after {
+    left: auto;
+    right: -2px;
+}
+
+.interior:before, .interior:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: -16% 0 0 -1px;
+    display: block;
+    width: 16%;
+    height: 55%;
+    /*background: rgb(27,31,38);*/
+    background-color: #17191F;
+    border: 1px solid #323642;
+}
+
+.interior:after {
+    left: auto;
+    right: 0;
+    margin: -16% -1px 0 0;
+}
+
+.semi2:before {
+    left: auto;
+    right: 12%;
+}
+
+.semi1:after, .semi2:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 16%;
+    height: 0;
+    margin: -8% 0 0 0;
+    padding-bottom: 16%;
+    border: 1px solid #323642;
+    border-radius: 50%;
+}
+.semi2:after {
+    left: auto;
+    right: 5%;
+}
+
+.gk{
+    content: "";
+    position: absolute;
+    top: 48%;
+    left: 2%;
+    display: block;
+    width: 3%;
+    height: 5%;
+    background-color: #4F7EDC;
+    border: 1px solid #324978;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.lb{
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 14%;
+    display: block;
+    width: 3%;
+    height: 5%;
+    background-color: #4F7EDC;
+    border: 1px solid #324978;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.cb{
+    content: "";
+    position: absolute;
+    top: 48%;
+    left: 14%;
+    display: block;
+    width: 3%;
+    height: 5%;
+    background-color: #4F7EDC;
+    border: 1px solid #324978;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.rb{
+    content: "";
+    position: absolute;
+    top: 85%;
+    left: 14%;
+    display: block;
+    width: 3%;
+    height: 5%;
+    background-color: #4F7EDC;
+    border: 1px solid #324978;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+
+.dm{
+    content: "";
+    position: absolute;
+    top: 48%;
+    left: 30%;
+    display: block;
+    width: 3%;
+    height: 5%;
+    background-color: #4F7EDC;
+    border: 1px solid #324978;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+
+.lm{
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 49%;
+    display: block;
+    width: 3%;
+    height: 5%;
+    background-color: #4F7EDC;
+    border: 1px solid #324978;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+    .cm{
+        content: "";
+        position: absolute;
+        top: 48%;
+        left: 49%;
+        display: block;
+        width: 3%;
+        height: 5%;
+        background-color: #4F7EDC;
+        border: 1px solid #324978;
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+.rm{
+    content: "";
+    position: absolute;
+    top: 85%;
+    left: 49%;
+    display: block;
+    width: 3%;
+    height: 5%;
+    background-color: #4F7EDC;
+    border: 1px solid #324978;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+.am{
+    content: "";
+    position: absolute;
+    top: 48%;
+    left: 67%;
+    display: block;
+    width: 3%;
+    height: 5%;
+    background-color: #4F7EDC;
+    border: 1px solid #324978;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+
+.wl{
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 83%;
+    display: block;
+    width: 3%;
+    height: 5%;
+    background-color: #4F7EDC;
+    border: 1px solid #324978;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+
+.wr{
+    content: "";
+    position: absolute;
+    top: 85%;
+    left: 83%;
+    display: block;
+    width: 3%;
+    height: 5%;
+    background-color: #4F7EDC;
+    border: 1px solid #324978;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.match{
+    margin-top: 80px;
+}
+
